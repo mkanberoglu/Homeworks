@@ -36,7 +36,7 @@ namespace ChasingButton
             b.Location = new Point(b.Location.X - 70, b.Location.Y);
         }
 
-        private void button1_MouseHover(object sender, EventArgs e)
+        private void button1_MouseEnter(object sender, EventArgs e)
         {
             Button b = (Button)sender;
             int yAxis = b.Location.Y;
@@ -75,74 +75,6 @@ namespace ChasingButton
                     b.Location = new Point(0, 0);
                     break;
             }
-            /*
-            if (b.Location.Y < 30)
-            {
-                b.Location = new Point(b.Location.X + 70, b.Location.Y);
-                if (b.Location.X + 100 > Size.Width)
-                {
-                    b.Location = new Point(b.Location.X - 70, b.Location.Y + 45);
-                }
-            }
-            else if (b.Location.Y > 30 && b.Location.Y < 60)
-            {
-                b.Location = new Point(b.Location.X - 70, b.Location.Y);
-                if (b.Location.X < 0)
-                {
-                    b.Location = new Point(b.Location.X + 70, b.Location.Y + 45);
-                }
-            }
-            else if (b.Location.Y > 60 && b.Location.Y < 120)
-            {
-                b.Location = new Point(b.Location.X + 70, b.Location.Y);
-                if (b.Location.X + 100 > Size.Width)
-                {
-                    b.Location = new Point(b.Location.X - 70, b.Location.Y + 45);
-                }
-            }
-            else if (b.Location.Y > 120 && b.Location.Y < 150)
-            {
-                b.Location = new Point(b.Location.X - 70, b.Location.Y);
-                if (b.Location.X < 0)
-                {
-                    b.Location = new Point(b.Location.X + 70, b.Location.Y + 45);
-                }
-            }
-            else if (b.Location.Y > 150 && b.Location.Y < 190)
-            {
-                b.Location = new Point(b.Location.X + 70, b.Location.Y);
-                if (b.Location.X + 100 > Size.Width)
-                {
-                    b.Location = new Point(b.Location.X - 70, b.Location.Y + 45);
-                }
-            }
-            else if (b.Location.Y > 190 && b.Location.Y < 250)
-            {
-                b.Location = new Point(b.Location.X - 70, b.Location.Y);
-                if (b.Location.X < 0)
-                {
-                    b.Location = new Point(b.Location.X + 70, b.Location.Y + 45);
-                }
-            }
-            else if (b.Location.Y > 250 && b.Location.Y < 300)
-            {
-                b.Location = new Point(b.Location.X + 70, b.Location.Y);
-                if (b.Location.X + 100 > Size.Width)
-                {
-                    b.Location = new Point(b.Location.X - 70, b.Location.Y + 45);
-                }
-            }
-            else if (b.Location.Y > 300)
-            {
-                MessageBox.Show("Oyun bitti tebrikler ...");
-                b.Location = new Point(0, 0);
-            }
-            /*
-            
-            else
-            {
-                b.Location = new Point(b.Location.X + 75);
-            }*/
         }
     }
 }

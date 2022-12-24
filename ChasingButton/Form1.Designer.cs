@@ -39,7 +39,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "-_-";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
+            this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
             // 
             // Form1
             // 
