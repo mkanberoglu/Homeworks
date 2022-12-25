@@ -84,8 +84,8 @@ namespace WinFormsApp1
             {
                 if (item.Image != null)
                 {
-                    item.Visible = false;
-
+                    item.Enabled = false;
+                    
                     listImage.Remove(item.Image);
                     removeds.Add(item);
                 }
@@ -119,7 +119,7 @@ namespace WinFormsApp1
 
             return count;
         }
-
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
             int count = GetOpenedDifferentCount();
