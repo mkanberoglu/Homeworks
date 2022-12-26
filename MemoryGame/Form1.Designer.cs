@@ -53,7 +53,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 2000;
+            this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // formImageList
@@ -185,7 +185,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer timer1;
         private ImageList formImageList;
         private Button startButton;
         private PictureBox pictureBox1;
@@ -196,5 +195,6 @@
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
         private PictureBox pictureBox8;
+        public System.Windows.Forms.Timer timer1;
     }
 }

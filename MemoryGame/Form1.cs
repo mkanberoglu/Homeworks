@@ -51,18 +51,36 @@ namespace WinFormsApp1
                 }
             }
         }
+        int baslaButtonCount = 0;
         private void startButton_Click(object sender, EventArgs e)
         {
-            SetPictureBoxes();
-            RastgeleResimSec();
+            if (baslaButtonCount == 0)
+            {
+                SetPictureBoxes();
+                RastgeleResimSec();
+                baslaButtonCount++;
+            }
+            else
+            {
+                DialogResult result1 = MessageBox.Show("Yeniden baþlamak için Evet çýkýþ yapmak için Hayýr butonuna týklayýnýz ...", "Uygulama Çýkýþ", MessageBoxButtons.YesNoCancel);
+                if (result1 == DialogResult.Yes)
+                {
+                    SetPictureBoxes();
+                    RastgeleResimSec();
+                    baslaButtonCount++;
+                }
+                else if(result1 == DialogResult.No)
+                {
+                    this.Close();
+                }
+            }
         }
-
-
+        List<PictureBox> checkList = new List<PictureBox>();
         private void pictureBox_Click(object sender, EventArgs e)
         {
             if (listImage.Count <= 0) return;
-
-            if (timer1.Enabled) return;
+            if (GetOpenedImage() > 2) MyTickEvent();
+            //if (timer1.Enabled) return;
 
             PictureBox pictureBox = (PictureBox)sender;
             int index = pictureBoxes.IndexOf(pictureBox);
@@ -111,7 +129,7 @@ namespace WinFormsApp1
 
             foreach (var item in pictureBoxes)
             {
-                if (item.Image != null)
+                if (item.Image != null && item.Enabled == true)
                 {
                     count++;
                 }
@@ -120,6 +138,18 @@ namespace WinFormsApp1
             return count;
         }
         
+        private void MyTickEvent()
+        {
+            timer1.Enabled = false;
+            int count = GetOpenedDifferentCount();
+
+            if (count == 1)
+            {
+                RemoveOpenedImages();
+            }
+            CloseAllImages();
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             int count = GetOpenedDifferentCount();
@@ -139,10 +169,7 @@ namespace WinFormsApp1
             {
                 MessageBox.Show("Kazandýnýz...");
             }
-
-
         }
-
 
         private int GetOpenedDifferentCount()
         {
@@ -159,7 +186,6 @@ namespace WinFormsApp1
                     }
                 }
             }
-
             return list.Count;
         }
     }
