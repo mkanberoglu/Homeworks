@@ -40,7 +40,7 @@ namespace WinFormsApp1
                 if (item is PictureBox)
                 {
                     PictureBox pictureBox = (PictureBox)item;
-
+                    pictureBox.Enabled = true;
                     pictureBox.Click += pictureBox_Click;
 
                     pictureBox.Visible = true;
