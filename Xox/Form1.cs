@@ -73,7 +73,7 @@ namespace Xox
             //Ýkinci button
             else if (button2.Text == button5.Text && button5.Text == button8.Text && !string.IsNullOrEmpty(button2.Text) && !string.IsNullOrEmpty(button5.Text) && !string.IsNullOrEmpty(button8.Text))
             {
-                DialogResult dialogResult = MessageBox.Show($"{button1.Text} kazandý oyun bitti ... \n\rTekrar oynamak ister misiniz ?", "Game over", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show($"{button2.Text} kazandý oyun bitti ... \n\rTekrar oynamak ister misiniz ?", "Game over", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     Application.Restart();
@@ -87,7 +87,7 @@ namespace Xox
             //Üçüncü button
             else if (button3.Text == button6.Text && button6.Text == button9.Text && !string.IsNullOrEmpty(button3.Text) && !string.IsNullOrEmpty(button6.Text) && !string.IsNullOrEmpty(button9.Text) )
             {
-                DialogResult dialogResult = MessageBox.Show($"{button1.Text} kazandý oyun bitti ... \n\rTekrar oynamak ister misiniz ?", "Game over", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show($"{button3.Text} kazandý oyun bitti ... \n\rTekrar oynamak ister misiniz ?", "Game over", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     Application.Restart();
@@ -100,7 +100,7 @@ namespace Xox
             }
             else if (button3.Text == button5.Text && button5.Text == button7.Text && !string.IsNullOrEmpty(button3.Text) && !string.IsNullOrEmpty(button5.Text) && !string.IsNullOrEmpty(button7.Text) )
             {
-                DialogResult dialogResult = MessageBox.Show($"{button1.Text} kazandý oyun bitti ... \n\rTekrar oynamak ister misiniz ?", "Game over", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show($"{button3.Text} kazandý oyun bitti ... \n\rTekrar oynamak ister misiniz ?", "Game over", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     Application.Restart();
@@ -114,7 +114,7 @@ namespace Xox
             //Dördüncü button
             else if (button4.Text == button5.Text && button5.Text == button6.Text && !string.IsNullOrEmpty(button4.Text) && !string.IsNullOrEmpty(button5.Text) && !string.IsNullOrEmpty(button6.Text))
             {
-                DialogResult dialogResult = MessageBox.Show($"{button1.Text} kazandý oyun bitti ... \n\rTekrar oynamak ister misiniz ?", "Game over", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show($"{button4.Text} kazandý oyun bitti ... \n\rTekrar oynamak ister misiniz ?", "Game over", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     Application.Restart();
@@ -130,7 +130,7 @@ namespace Xox
             //Yedinci button
             else if (button7.Text == button8.Text && button8.Text == button9.Text && !string.IsNullOrEmpty(button7.Text) && !string.IsNullOrEmpty(button8.Text) && !string.IsNullOrEmpty(button9.Text) )
             {
-                DialogResult dialogResult = MessageBox.Show($"{button1.Text} kazandý oyun bitti ... \n\rTekrar oynamak ister misiniz ?", "Game over", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show($"{button7.Text} kazandý oyun bitti ... \n\rTekrar oynamak ister misiniz ?", "Game over", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     Application.Restart();
