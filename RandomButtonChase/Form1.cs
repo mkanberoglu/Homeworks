@@ -9,7 +9,7 @@ namespace RandomButtonChase
         Random rnd = new Random();
         private void button1_MouseEnter(object sender, EventArgs e)
         {
-            timer1.Start();
+            timer1.Stop();
             button1.Location = new Point(rnd.Next(1, this.Width - 150), rnd.Next(1, this.Height - 46));
             timer1.Start();
         }
