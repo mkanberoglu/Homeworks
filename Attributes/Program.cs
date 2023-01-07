@@ -11,6 +11,7 @@ namespace Attributes
             Console.WriteLine(Writer.Write(d));
         }
     }
+    #region Attribute
     [AttributeUsage(AttributeTargets.Property)]
     public class PropertyControl : Attribute
     {
@@ -20,6 +21,8 @@ namespace Attributes
             this.maxValue = maxValue;
         }
     }
+    #endregion
+    #region Data Class
     public class Data
     {
         [PropertyControl(maxValue: 100)]
@@ -37,6 +40,8 @@ namespace Attributes
             this.fourth = fourth;
         }
     }
+    #endregion
+    #region Writer Function
     public class Writer
     {
         public static string Write(object obj)
@@ -58,4 +63,5 @@ namespace Attributes
             return msg;
         }
     }
+    #endregion
 }

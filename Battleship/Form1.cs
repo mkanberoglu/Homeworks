@@ -6,5 +6,12 @@ namespace Battleship
         {
             InitializeComponent();
         }
+        List<string> playerShipLocations;
+        List<string> enemyShipLocations;
+        public void PlaceShip()
+        {
+            Random random = new Random();
+            random.Next();
+        }
     }
 }
